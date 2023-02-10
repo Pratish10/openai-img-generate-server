@@ -35,7 +35,6 @@ router.route("/").post(async (req, res) => {
     res
       .status(500)
       .send(error?.response.data.error.message || "Something went wrong");
-    // console.log("error");
   }
 });
 

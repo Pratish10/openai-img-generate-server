@@ -1,0 +1,5 @@
+{
+    "yaml.schemas": {
+        "https://json.schemastore.org/github-workflow.json": "file:///g%3A/openai-img-generate-server/.github/workflows/deploy.yml"
+    }
+}

@@ -36,12 +36,3 @@ const startServer = async () => {
 };
 
 startServer();
-
-// monogodb:
-//     volumes:
-//       - mern_db:/data/db
-//     image: mongo:latest
-//     ports:
-//       - "27017:27017"
-// volumes:
-//    mern_db:
