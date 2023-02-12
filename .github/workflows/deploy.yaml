@@ -42,7 +42,7 @@ jobs:
           REPOSITORY: img-generate-server
           IMAGE_TAG: ${{ github.sha }}
         run: |
-          docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG -t latest .
+          docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG -t $REGISTRY/$REPOSITORY:latest .
           docker push -a $REGISTRY/$REPOSITORY
 
       # - name: Run Datree Policy Check
@@ -50,6 +50,9 @@ jobs:
       #   with:
       #     path: "K8s/*.yaml"
       #     cliArguments: "--only-k8s-files"
+
+      - name: Update kubeconfig
+        run: aws eks update-kubeconfig --region ap-south-1 --name openai-img-generate-server
 
       - name: Deploy image to Amazon EKS
         run: |
