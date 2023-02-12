@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: openai-img-generate-server-deployment
+  labels:
+    app: openai-img-generate-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: openai-img-generate-server
+  template:
+    metadata:
+      labels:
+        app: openai-img-generate-server
+    spec:
+      containers:
+        - name: openai-img-generate-server
+          image: 859002574591.dkr.ecr.ap-south-1.amazonaws.com/img-generate-server:latest
+          ports:
+            - containerPort: 8000
