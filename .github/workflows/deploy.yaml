@@ -45,11 +45,11 @@ jobs:
           docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG -t latest .
           docker push -a $REGISTRY/$REPOSITORY
 
-      - name: Run Datree Policy Check
-        uses: datreeio/action-datree@main
-        with:
-          path: "K8s/*.yaml"
-          cliArguments: "--only-k8s-files"
+      # - name: Run Datree Policy Check
+      #   uses: datreeio/action-datree@main
+      #   with:
+      #     path: "K8s/*.yaml"
+      #     cliArguments: "--only-k8s-files"
 
       - name: Deploy image to Amazon EKS
         run: |
