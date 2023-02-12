@@ -19,7 +19,7 @@ app.use("/api/v1/dalle", apiRoutes);
 
 app.get("/", async (req, res) => {
   res.status(200).json({
-    message: "Hello from Pratish",
+    message: "Hello from Pratish Ninawe",
   });
 });
 
