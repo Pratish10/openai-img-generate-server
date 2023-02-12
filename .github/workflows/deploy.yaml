@@ -4,8 +4,8 @@ on:
   push:
     branches: ["master"]
 
-env:
-  DATREE_TOKEN: ${{ secrets.DATREE_TOKEN }}
+# env:
+#   DATREE_TOKEN: ${{ secrets.DATREE_TOKEN }}
 
 jobs:
   deploy:
