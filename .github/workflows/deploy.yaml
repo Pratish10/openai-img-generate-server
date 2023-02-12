@@ -48,7 +48,7 @@ jobs:
       - name: Run Datree Policy Check
         uses: datreeio/action-datree@main
         with:
-          path: "*.yaml"
+          path: "k8s/*.yaml"
           cliArguments: "--only-k8s-files"
 
       - name: Deploy image to Amazon EKS
