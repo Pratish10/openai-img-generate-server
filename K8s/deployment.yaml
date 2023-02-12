@@ -17,5 +17,6 @@ spec:
       containers:
         - name: openai-img-generate-server
           image: 859002574591.dkr.ecr.ap-south-1.amazonaws.com/img-generate-server:latest
+          imagePullPolicy: Always # to make sure that kubernetes will always pull latest image from ecr
           ports:
             - containerPort: 8000
